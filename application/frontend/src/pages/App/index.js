@@ -46,7 +46,8 @@ class App extends Component {
       vehicles: [],
       center: [13.419435, 52.51477],
       start: null,
-      end: null
+      end: null,
+      loadStations: null
     }
   }
 
@@ -87,13 +88,12 @@ class App extends Component {
 
   render() {
 
-    const { vehicles, center, start, end } = this.state
+    const { vehicles, center, start, end, loadStations } = this.state
 
     console.log("tank : ", tank);
     console.log("start", start);
     console.log("end", end);
     return (
-
       <BrowserRouter>
         <PageWrapper>
           <Map
@@ -102,18 +102,24 @@ class App extends Component {
             onClick={(e, data) => {
               console.log("E", e);
               console.log("data", data);
+              console.log("data", this.state.start, this.state.end);
               let { lng, lat } = data.lngLat;
-              if (!start) {
+              if (this.state.start === null) {
                 this.setState({ start: [lng, lat] })
                 return
+              } else if(this.state.end === null) {
+                this.setState({ end: [lng, lat] })
+                return
+              } else {
+                this.setState({ loadStations: true })                
               }
-              this.setState({ end: [lng, lat] })
+              
             }}
             containerStyle={{
               height: "90vh",
               width: "90vw",
             }}>
-            <Layer
+            {end && <Layer
               type="symbol"
               id="marker"
               layout={{ "icon-image": "marker-15" }}>
@@ -121,7 +127,7 @@ class App extends Component {
               {tank.stations.map(station => (
                 <Feature key={station.id} coordinates={[station.lng, station.lat]} />
               ))}
-            </Layer>
+            </Layer>}
 
             <Layer
               type="circle"
@@ -133,13 +139,11 @@ class App extends Component {
 
             <Layer
               type="circle"
-              id="example_id_marker"
+              id="444"
               paint={POSITION_CIRCLE_END}
             >
               {end && <Feature coordinates={end} />}
-            </Layer>
-
-              
+            </Layer>              
           </Map>
         </PageWrapper>
       </BrowserRouter >
