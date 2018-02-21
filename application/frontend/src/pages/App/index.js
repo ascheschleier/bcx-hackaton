@@ -21,6 +21,22 @@ const Map = ReactMapboxGl({
   accessToken: "pk.eyJ1IjoiYXNjaGVzY2hsZWllciIsImEiOiJjamR3emk3cnEwZWRnMndvMXd6Ymo3eTA0In0.Y1n4sTGtftDhWL41cgP3kw"
 });
 
+const POSITION_CIRCLE_START = {
+  'circle-stroke-width': 4,
+  'circle-radius': 10,
+  'circle-blur': 0.15,
+  'circle-color': '#3770C6',
+  'circle-stroke-color': 'white'
+};
+
+const POSITION_CIRCLE_END = {
+  'circle-stroke-width': 4,
+  'circle-radius': 10,
+  'circle-blur': 0.15,
+  'circle-color': '#e5cccc',
+  'circle-stroke-color': 'red'
+};
+
 
 class App extends Component {
   constructor(props) {
@@ -86,16 +102,16 @@ class App extends Component {
             onClick={(e, data) => {
               console.log("E", e);
               console.log("data", data);
-              let {lng, lat} = data.lngLat;
+              let { lng, lat } = data.lngLat;
               if (!start) {
-                this.setState({start: [lng, lat]})
+                this.setState({ start: [lng, lat] })
                 return
               }
-              this.setState({end: [lng, lat]})
+              this.setState({ end: [lng, lat] })
             }}
             containerStyle={{
               height: "90vh",
-              width: "90vw",              
+              width: "90vw",
             }}>
             <Layer
               type="symbol"
@@ -106,13 +122,27 @@ class App extends Component {
                 <Feature key={station.id} coordinates={[station.lng, station.lat]} />
               ))}
             </Layer>
-              <Layer>
-                {start && <Feature coordinates={start} />}
-                {end && <Feature coordinates={end} />}
-              </Layer>
+
+            <Layer
+              type="circle"
+              id="example_id_marker"
+              paint={POSITION_CIRCLE_START}
+            >
+              {start && <Feature coordinates={start} />}
+            </Layer>
+
+            <Layer
+              type="circle"
+              id="example_id_marker"
+              paint={POSITION_CIRCLE_END}
+            >
+              {end && <Feature coordinates={end} />}
+            </Layer>
+
+              
           </Map>
         </PageWrapper>
-      </BrowserRouter>
+      </BrowserRouter >
     )
   }
 }
