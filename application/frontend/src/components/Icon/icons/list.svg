@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.93 35.15">
+    <defs>
+        <style>
+            .svg_2YaCyzjS{fill:none!important;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2.5px}
+        </style>
+    </defs>
+    <g>
+        <g>
+            <path d="M12.75 3.11h35.93M12.75 17.57h35.93M12.75 32.04h35.93" class="svg_2YaCyzjS"/>
+            <circle cx="3.11" cy="3.11" r="3.11"/>
+            <circle cx="3.11" cy="17.57" r="3.11"/>
+            <circle cx="3.11" cy="32.04" r="3.11"/>
+        </g>
+    </g>
+</svg>

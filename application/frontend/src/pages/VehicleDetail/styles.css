@@ -1,0 +1,70 @@
+@import 'config.css';
+
+.row {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.row > * {
+  flex-shrink: 1;
+  margin-right: 20px;
+}
+
+.row > *:last-child {
+  margin: 0;
+}
+
+.sidebar {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map {
+  width: 50%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  box-shadow: var(--shadow-gray);
+  background-size: cover;
+  background-position: center center;
+}
+
+.attributeTable {
+  width: 100%;
+  margin-top: var(--distance-big);
+  text-align: left;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.attributeTableHeading {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.attributeTableHeading, .attributeTableContent {
+  width: 50%;
+  padding-bottom: var(--distance-small);
+}
+
+.available {
+  color: var(--color-green);
+}
+
+.unavailable, .overdue {
+  color: var(--color-red);
+}
+
+.subHeading {
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-semi-bold);
+  margin-bottom: var(--distance-normal);
+  text-transform: uppercase;
+}

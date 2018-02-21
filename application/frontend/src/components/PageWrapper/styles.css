@@ -1,0 +1,28 @@
+@import 'config.css';
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: rgb(239, 239, 240);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.subnavigation {
+  /*padding: 20px;*/
+  padding-bottom: 0;
+}
+
+.contentWrapper {
+  flex: 1;
+  padding: 24px;
+  padding-top: 14px;
+  overflow: hidden;
+}

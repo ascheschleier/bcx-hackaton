@@ -1,0 +1,7 @@
+@import 'config.css';
+
+.subNavigation {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--distance-normal)
+}

@@ -1,0 +1,33 @@
+@import 'config.css';
+
+.link {
+  padding: var(--distance-small) var(--distance-normal);
+  border: 2px solid var(--color-main);
+  border-right: 0;
+  color: var(--color-main);
+  background: none;
+  font-size: var(--font-size-normal);
+  text-decoration: none;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:first-child {
+  border-top-left-radius: var(--border-radius-squircle);
+}
+
+.link:last-of-type {
+  border-right: 2px solid var(--color-main);
+  border-top-right-radius: var(--border-radius-squircle);
+}
+
+.linkActive, .link:focus {
+  background: var(--color-main);
+  color: var(--color-white);
+}
+
+.linkRight {
+  margin-left: auto;
+}

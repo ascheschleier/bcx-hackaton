@@ -1,0 +1,24 @@
+@import 'config.css';
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vehiclesList {
+  display: flex;
+  flex-wrap: wrap !important;
+  box-sizing: border-box;
+}
+
+.filterBar {
+  display: flex;
+  margin-bottom: var(--distance-normal);
+  width: 100%;
+}
+
+.search {
+  width: 400px;
+  margin-right: var(--distance-normal);
+}

@@ -1,0 +1,66 @@
+.calInput{
+    font-family:"Bosch Sans",Arial,sans-serif;
+    font-size:14px;
+    line-height:1.4;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:12px 12px;
+    -webkit-transition:background 100ms linear;
+    transition:background 100ms linear;
+    color:#1F1F1F;
+    border:0;
+    border-bottom:1px solid #BDBDBD;
+    background:#f9f9f9;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none
+}
+.calInput::-webkit-input-placeholder{
+    color:#BDBDBD
+}
+.calInput:-ms-input-placeholder{
+    color:#BDBDBD
+}
+.calInput::-ms-input-placeholder{
+    color:#BDBDBD
+}
+.calInput::placeholder{
+    color:#BDBDBD
+}
+.calInput:not(:disabled):hover,.calInput:focus{
+    outline:none;
+    background:#eee
+}
+.calInput:disabled{
+    opacity:0.4
+}
+.calInput.calInput--danger{
+    border-color:#E20015
+}
+.calInput.calInput--success{
+    border-color:#78BE20
+}
+.calInput.calInput__hasIcon{
+    padding-right:54px
+}
+.calInput.calInput--read-only{
+    padding-right:0;
+    padding-left:0;
+    border-bottom-color:#FDFDFD;
+    background:#FDFDFD
+}
+.calInput.calInput--read-only:hover{
+    background:#FDFDFD
+}
+.calInput__icon{
+    position:relative;
+    top:9px;
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    margin-left:-45px;
+    pointer-events:none
+}
+.calInput__icon.calInput__icon--disabled{
+    opacity:0.4
+}

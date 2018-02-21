@@ -1,0 +1,30 @@
+.calTabs__tab {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+    padding: 16px 0;
+    -webkit-transition: border-color 200ms ease-out;
+    transition: border-color 200ms ease-out;
+    text-align: center;
+    text-decoration: none;
+    color: #1F1F1F;
+    border-bottom: 3px solid transparent;
+    flex:1;
+}
+.calTabs__tab:last-child{
+    margin-right:24px
+}
+.calTabs__tab:hover{
+    border-color:#D6D6D6
+}
+.calTabs__tab__active{
+    border-color:#005691
+}
+.calTabs_full_width{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:distribute;
+    justify-content:space-around
+}

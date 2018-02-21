@@ -1,0 +1,12 @@
+.calTabs {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+    border-bottom: 1px solid #D6D6D6;
+    display: flex;
+    width: 100%;
+}

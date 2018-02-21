@@ -1,0 +1,103 @@
+@import 'config.css';
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+/* Scrollbars */
+
+.scrollWrapper {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollWrapperSticky, .scrollWrapperElements {
+  width: 100%;
+}
+
+.scrollWrapperSticky {
+  margin-bottom: var(--distance-normal);
+}
+
+.scrollWrapperElements {
+  flex: 1;
+  height: 100%;
+}
+
+.view {
+  padding-right: 18px;
+  padding-bottom: 5px;
+}
+
+.track {
+  position: absolute;
+  width: 8px !important;
+  right: 2px;
+  bottom: 0;
+  top: 0;
+}
+
+
+.thumb {
+  cursor: pointer;
+  border-radius: var(--border-radius-circle);
+  background-color: var(--color-brand);
+}
+
+/* Arrows */
+
+.arrowWrapperHorizontal {
+  height: 100%;
+  display: flex;
+}
+
+.arrowButton {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-color-hover);
+  }
+}
+
+.arrowView {
+  flex: 1;
+  height: 100%;
+  padding: 0 var(--distance-normal);
+}
+
+.arrowWrapperVertical {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowWrapperVertical .arrowButton {
+  height: 40px;
+  width: 100%;
+}
+
+.arrowWrapperVertical .arrowView {
+  height: 100%;
+  padding: var(--distance-normal) 0;
+}

@@ -1,0 +1,30 @@
+@import 'config.css';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-dark-gray);
+  border-radius: var(--border-radius-circle);
+  margin-right: var(--distance-small);
+}
+
+.boxChecked {
+  border-color: var(--color-main);
+}
+
+.boxCheckedInner {
+  width: 10px;
+  height: 10px;
+  background: var(--color-main);
+  border-radius: var(--border-radius-circle);
+}

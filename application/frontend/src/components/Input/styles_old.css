@@ -1,0 +1,98 @@
+@import 'config.css';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  bottom: var(--distance-tiny);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-light);
+  color: var(--color-grey);
+  pointer-events: none;
+  transition: all 100ms;
+}
+
+.wrapperFocus .label, .filledWrapper .label {
+  position: absolute;
+  top: calc(-1 * (var(--distance-small) + 5px));
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-light);
+  color: var(--color-grey);
+}
+
+.wrapperError .label {
+  color: var(--color-red);
+}
+
+.wrapperFocus .label {
+  color: var(--color-accent);
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--distance-small);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.input {
+  appearance: none;
+  background-color: transparent;
+  padding: var(--distance-small) 0 var(--distance-tiny);
+  margin: 0;
+  border: none;
+  font-size: var(--font-size-normal);
+  color: var(--color-dark-gray);
+  outline: none;
+  flex: 1;
+  border-bottom: 1px solid var(--color-dark-gray);
+}
+
+.wrapperRound .input {
+  border: 1px solid var(--color-dark-gray);
+  border-radius: var(--border-radius-circle);
+  padding: calc(var(--distance-small) - var(--distance-tiny)) 0;
+}
+
+.wrapperError .input {
+  border-color: var(--color-red);
+}
+
+.wrapperFocus .input {
+  border-color: var(--color-accent);
+}
+
+.disabledWrapper .input {
+  color: var(--color-grey);
+  border-color: var(--color-grey);
+  cursor: not-allowed;
+}
+
+.inputWithIcon, .wrapperRound .inputWithIcon {
+  padding-left: calc(var(--distance-big) + var(--distance-small));
+}
+
+.unit {
+  margin-left: var(--distance-normal);
+}
+
+.errors {
+  font-size: var(--font-size-small);
+  margin-top: var(--distance-tiny);
+  color: var(--color-red);
+}
+
+.primary.wrapperFocus .label {
+  color: var(--color-main);
+}
+
+.primary.wrapperFocus .input {
+  border-color: var(--color-main);
+}

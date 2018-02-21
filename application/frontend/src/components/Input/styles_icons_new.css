@@ -1,0 +1,511 @@
+.calIcon{
+    line-height:1;
+    font-size:2em
+}
+.calIcon:before{
+    font-family:CalponiaIcons !important;
+    font-style:normal;
+    font-weight:normal !important;
+    vertical-align:top
+}
+.calIcon.calIcon__abort-frame:before{
+    content:"\f101"
+}
+.calIcon.calIcon__add:before{
+    content:"\f102"
+}
+.calIcon.calIcon__address-consumer-data:before{
+    content:"\f103"
+}
+.calIcon.calIcon__alert-error-filled:before{
+    content:"\f104"
+}
+.calIcon.calIcon__alert-error:before{
+    content:"\f105"
+}
+.calIcon.calIcon__alert-success-filled:before{
+    content:"\f106"
+}
+.calIcon.calIcon__alert-success:before{
+    content:"\f107"
+}
+.calIcon.calIcon__alert-warning-filled:before{
+    content:"\f108"
+}
+.calIcon.calIcon__alert-warning:before{
+    content:"\f109"
+}
+.calIcon.calIcon__anchor:before{
+    content:"\f10a"
+}
+.calIcon.calIcon__apas:before{
+    content:"\f10b"
+}
+.calIcon.calIcon__asiapacific-frame:before{
+    content:"\f10c"
+}
+.calIcon.calIcon__back-left:before{
+    content:"\f10d"
+}
+.calIcon.calIcon__bookmark-add:before{
+    content:"\f10e"
+}
+.calIcon.calIcon__bookmark-delete:before{
+    content:"\f10f"
+}
+.calIcon.calIcon__bookmark:before{
+    content:"\f110"
+}
+.calIcon.calIcon__building:before{
+    content:"\f111"
+}
+.calIcon.calIcon__calendar-add:before{
+    content:"\f112"
+}
+.calIcon.calIcon__calendar-settings:before{
+    content:"\f113"
+}
+.calIcon.calIcon__calendar:before{
+    content:"\f114"
+}
+.calIcon.calIcon__call-wifi:before{
+    content:"\f115"
+}
+.calIcon.calIcon__call:before{
+    content:"\f116"
+}
+.calIcon.calIcon__car:before{
+    content:"\f117"
+}
+.calIcon.calIcon__cash-frame:before{
+    content:"\f118"
+}
+.calIcon.calIcon__checkmark-frame:before{
+    content:"\f119"
+}
+.calIcon.calIcon__checkmark:before{
+    content:"\f11a"
+}
+.calIcon.calIcon__clock:before{
+    content:"\f11b"
+}
+.calIcon.calIcon__close:before{
+    content:"\f11c"
+}
+.calIcon.calIcon__cloud:before{
+    content:"\f11d"
+}
+.calIcon.calIcon__colors:before{
+    content:"\f11e"
+}
+.calIcon.calIcon__compare:before{
+    content:"\f11f"
+}
+.calIcon.calIcon__configuration:before{
+    content:"\f120"
+}
+.calIcon.calIcon__confirmation:before{
+    content:"\f121"
+}
+.calIcon.calIcon__consumer-goods:before{
+    content:"\f122"
+}
+.calIcon.calIcon__copyright-frame:before{
+    content:"\f123"
+}
+.calIcon.calIcon__customerservice:before{
+    content:"\f124"
+}
+.calIcon.calIcon__dealer-details:before{
+    content:"\f125"
+}
+.calIcon.calIcon__delete:before{
+    content:"\f126"
+}
+.calIcon.calIcon__delivery:before{
+    content:"\f127"
+}
+.calIcon.calIcon__devices:before{
+    content:"\f128"
+}
+.calIcon.calIcon__document-delete:before{
+    content:"\f129"
+}
+.calIcon.calIcon__document:before{
+    content:"\f12a"
+}
+.calIcon.calIcon__dome:before{
+    content:"\f12b"
+}
+.calIcon.calIcon__down:before{
+    content:"\f12c"
+}
+.calIcon.calIcon__download-frame:before{
+    content:"\f12d"
+}
+.calIcon.calIcon__download:before{
+    content:"\f12e"
+}
+.calIcon.calIcon__dragdrop:before{
+    content:"\f12f"
+}
+.calIcon.calIcon__edit:before{
+    content:"\f130"
+}
+.calIcon.calIcon__equipment:before{
+    content:"\f131"
+}
+.calIcon.calIcon__europe-frame:before{
+    content:"\f132"
+}
+.calIcon.calIcon__externallink:before{
+    content:"\f133"
+}
+.calIcon.calIcon__facebook-frame:before{
+    content:"\f134"
+}
+.calIcon.calIcon__folder:before{
+    content:"\f135"
+}
+.calIcon.calIcon__forward-right:before{
+    content:"\f136"
+}
+.calIcon.calIcon__glossary:before{
+    content:"\f137"
+}
+.calIcon.calIcon__googleplus-frame:before{
+    content:"\f138"
+}
+.calIcon.calIcon__grid-view:before{
+    content:"\f139"
+}
+.calIcon.calIcon__home:before{
+    content:"\f13a"
+}
+.calIcon.calIcon__home2:before{
+    content:"\f13b"
+}
+.calIcon.calIcon__imagery:before{
+    content:"\f13c"
+}
+.calIcon.calIcon__industry:before{
+    content:"\f13d"
+}
+.calIcon.calIcon__info-i:before{
+    content:"\f13e"
+}
+.calIcon.calIcon__instagram-frame:before{
+    content:"\f13f"
+}
+.calIcon.calIcon__keyboard:before{
+    content:"\f140"
+}
+.calIcon.calIcon__label:before{
+    content:"\f141"
+}
+.calIcon.calIcon__layout:before{
+    content:"\f142"
+}
+.calIcon.calIcon__less-minimize:before{
+    content:"\f143"
+}
+.calIcon.calIcon__lightbulb-off:before{
+    content:"\f144"
+}
+.calIcon.calIcon__lightbulb:before{
+    content:"\f145"
+}
+.calIcon.calIcon__lineapp-frame:before{
+    content:"\f146"
+}
+.calIcon.calIcon__linkedin-frame:before{
+    content:"\f147"
+}
+.calIcon.calIcon__list-view-mobile:before{
+    content:"\f148"
+}
+.calIcon.calIcon__list-view:before{
+    content:"\f149"
+}
+.calIcon.calIcon__livechat:before{
+    content:"\f14a"
+}
+.calIcon.calIcon__locator:before{
+    content:"\f14b"
+}
+.calIcon.calIcon__logout:before{
+    content:"\f14c"
+}
+.calIcon.calIcon__maximize:before{
+    content:"\f14d"
+}
+.calIcon.calIcon__minimize:before{
+    content:"\f14e"
+}
+.calIcon.calIcon__more-maximize:before{
+    content:"\f14f"
+}
+.calIcon.calIcon__mouse-left:before{
+    content:"\f150"
+}
+.calIcon.calIcon__mouse-right:before{
+    content:"\f151"
+}
+.calIcon.calIcon__mouse:before{
+    content:"\f152"
+}
+.calIcon.calIcon__my-brand-frame:before{
+    content:"\f153"
+}
+.calIcon.calIcon__my-product:before{
+    content:"\f154"
+}
+.calIcon.calIcon__newsletter:before{
+    content:"\f155"
+}
+.calIcon.calIcon__northamerica-frame:before{
+    content:"\f156"
+}
+.calIcon.calIcon__notification:before{
+    content:"\f157"
+}
+.calIcon.calIcon__options:before{
+    content:"\f158"
+}
+.calIcon.calIcon__page-add:before{
+    content:"\f159"
+}
+.calIcon.calIcon__paperclip:before{
+    content:"\f15a"
+}
+.calIcon.calIcon__pause:before{
+    content:"\f15b"
+}
+.calIcon.calIcon__payment:before{
+    content:"\f15c"
+}
+.calIcon.calIcon__pdf:before{
+    content:"\f15d"
+}
+.calIcon.calIcon__people:before{
+    content:"\f15e"
+}
+.calIcon.calIcon__pinterest-frame:before{
+    content:"\f15f"
+}
+.calIcon.calIcon__play:before{
+    content:"\f160"
+}
+.calIcon.calIcon__postal-code:before{
+    content:"\f161"
+}
+.calIcon.calIcon__print:before{
+    content:"\f162"
+}
+.calIcon.calIcon__problem-frame:before{
+    content:"\f163"
+}
+.calIcon.calIcon__promotion-frame:before{
+    content:"\f164"
+}
+.calIcon.calIcon__question-frame:before{
+    content:"\f165"
+}
+.calIcon.calIcon__question:before{
+    content:"\f166"
+}
+.calIcon.calIcon__reference:before{
+    content:"\f167"
+}
+.calIcon.calIcon__refresh:before{
+    content:"\f168"
+}
+.calIcon.calIcon__registration:before{
+    content:"\f169"
+}
+.calIcon.calIcon__reset:before{
+    content:"\f16a"
+}
+.calIcon.calIcon__rocket:before{
+    content:"\f16b"
+}
+.calIcon.calIcon__rotation:before{
+    content:"\f16c"
+}
+.calIcon.calIcon__route:before{
+    content:"\f16d"
+}
+.calIcon.calIcon__search:before{
+    content:"\f16e"
+}
+.calIcon.calIcon__settings:before{
+    content:"\f16f"
+}
+.calIcon.calIcon__share-frame:before{
+    content:"\f170"
+}
+.calIcon.calIcon__share:before{
+    content:"\f171"
+}
+.calIcon.calIcon__shopping-cart:before{
+    content:"\f172"
+}
+.calIcon.calIcon__shoppingcart-add:before{
+    content:"\f173"
+}
+.calIcon.calIcon__shoppingcart-switch:before{
+    content:"\f174"
+}
+.calIcon.calIcon__shoppingcart:before{
+    content:"\f175"
+}
+.calIcon.calIcon__signpost:before{
+    content:"\f176"
+}
+.calIcon.calIcon__snapchat-frame:before{
+    content:"\f177"
+}
+.calIcon.calIcon__southamerica-frame:before{
+    content:"\f178"
+}
+.calIcon.calIcon__start-play-frame:before{
+    content:"\f179"
+}
+.calIcon.calIcon__subtitles-off:before{
+    content:"\f17a"
+}
+.calIcon.calIcon__subtitles:before{
+    content:"\f17b"
+}
+.calIcon.calIcon__summary:before{
+    content:"\f17c"
+}
+.calIcon.calIcon__surveillance:before{
+    content:"\f17d"
+}
+.calIcon.calIcon__switch:before{
+    content:"\f17e"
+}
+.calIcon.calIcon__tablet:before{
+    content:"\f17f"
+}
+.calIcon.calIcon__team:before{
+    content:"\f180"
+}
+.calIcon.calIcon__transscript-off:before{
+    content:"\f181"
+}
+.calIcon.calIcon__transscript-on:before{
+    content:"\f182"
+}
+.calIcon.calIcon__transscript:before{
+    content:"\f183"
+}
+.calIcon.calIcon__tumblr-frame:before{
+    content:"\f184"
+}
+.calIcon.calIcon__twitter-frame:before{
+    content:"\f185"
+}
+.calIcon.calIcon__typography:before{
+    content:"\f186"
+}
+.calIcon.calIcon__up-down:before{
+    content:"\f187"
+}
+.calIcon.calIcon__up:before{
+    content:"\f188"
+}
+.calIcon.calIcon__upload:before{
+    content:"\f189"
+}
+.calIcon.calIcon__user:before{
+    content:"\f18a"
+}
+.calIcon.calIcon__vimeo-frame:before{
+    content:"\f18b"
+}
+.calIcon.calIcon__volume-disabled:before{
+    content:"\f18c"
+}
+.calIcon.calIcon__volume-high:before{
+    content:"\f18d"
+}
+.calIcon.calIcon__volume-low:before{
+    content:"\f18e"
+}
+.calIcon.calIcon__volume-off:before{
+    content:"\f18f"
+}
+.calIcon.calIcon__watch-off:before{
+    content:"\f190"
+}
+.calIcon.calIcon__watch-on:before{
+    content:"\f191"
+}
+.calIcon.calIcon__wechat-frame:before{
+    content:"\f192"
+}
+.calIcon.calIcon__weibo-frame:before{
+    content:"\f193"
+}
+.calIcon.calIcon__welcome:before{
+    content:"\f194"
+}
+.calIcon.calIcon__whatsapp-frame:before{
+    content:"\f195"
+}
+.calIcon.calIcon__wishlist:before{
+    content:"\f196"
+}
+.calIcon.calIcon__world-frame:before{
+    content:"\f197"
+}
+.calIcon.calIcon__wrench:before{
+    content:"\f198"
+}
+.calIcon.calIcon__xing-frame:before{
+    content:"\f199"
+}
+.calIcon.calIcon__youku-frame:before{
+    content:"\f19a"
+}
+.calIcon.calIcon__youtube-frame:before{
+    content:"\f19b"
+}
+.calIcon.calIcon__zoomin:before{
+    content:"\f19c"
+}
+.calIcon.calIcon__zoomout:before{
+    content:"\f19d"
+}
+@-webkit-keyframes spin{
+    from{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spin{
+    from{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+.calIcon__spinning{
+    -webkit-animation-name:spin;
+    animation-name:spin;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    animation-timing-function:linear
+}

@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  app:
+    build: .
+    labels:
+      - "calponia.publish=3000"
+    ports:
+      - '3000:3000'
+
+  mongo:
+    image: mongo
+    volumes:
+      - 'mongo:/data/db'
+    ports:
+      - '27017:27017'
+
+volumes:
+  mongo:

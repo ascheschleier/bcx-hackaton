@@ -1,0 +1,38 @@
+@import 'config.css';
+
+.row {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.row > * {
+  flex-shrink: 1;
+  margin-right: 20px;
+}
+
+.row > *:last-child {
+  margin: 0;
+}
+
+.sidebar {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map {
+  border: solid 1px #D6D6D6;
+  border-radius: 2px;
+  /*box-shadow: 1px 1px 5px;*/
+  width: 50%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.subHeading {
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-semi-bold);
+  margin-bottom: var(--distance-normal);
+  text-transform: uppercase;
+}

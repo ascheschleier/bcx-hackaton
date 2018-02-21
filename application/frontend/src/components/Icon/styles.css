@@ -1,0 +1,37 @@
+@import 'config.css';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.marginLeft {
+  margin-left: var(--distance-small);
+}
+
+.marginRight {
+  margin-right: var(--distance-small);
+}
+
+.floatRight {
+  margin-left: auto;
+}
+
+.wrapper > svg {
+  width: 95%;
+  height: 95%;
+}
+
+/*
+  > The conversion of SVG colors is done automatically, see ./index.js
+
+  The default behaviour of SVG is to fill with "#000" if nothing else is defined
+  Here we overwrite that to render with the surrounding color instead
+  In case an SVG wants to render with "fill: none" it can define an "!important"
+
+  The default behaviour of SVG is to stroke with "none", so we don't set a default stroke here.
+  In case an SVG wants to render a stroke, it can define it as "currentColor"
+*/
+.wrapper > svg, .wrapper > svg * {
+  fill: currentColor;
+}

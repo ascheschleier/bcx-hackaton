@@ -1,0 +1,184 @@
+@import 'config.css';
+
+.button {
+  display: flex;
+  width: auto;
+  align-items: center;
+
+  box-sizing: content-box;
+  height: 24px; /* set height to icon height */
+
+  color: var(--color-white);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+
+  border: 2px solid var(--color-main);
+  border-radius: var(--border-radius-circle);
+
+  background: var(--color-main);
+  box-shadow: var(--shadow-main);
+
+  padding-top: calc(var(--distance-small) - var(--distance-tiny));
+  padding-bottom: calc(var(--distance-small) - var(--distance-tiny));
+  padding-left: var(--distance-normal);
+  padding-right: calc(var(--distance-normal) + 5px);
+
+  &:hover {
+    color: var(--color-white);
+    box-shadow: var(--shadow-main-hover);
+    border-color: var(--background-color-main-hover);
+    background-color: var(--background-color-main-hover);
+    text-decoration: none !important;
+  }
+}
+
+.buttonAccent {
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  box-shadow: var(--shadow-accent);
+
+  &:hover {
+    color: var(--color-white);
+    box-shadow: var(--shadow-accent-hover);
+    border-color: var(--background-color-accent-hover);
+    background-color: var(--background-color-accent-hover);
+  }
+}
+
+.buttonSecondary {
+  color: var(--color-main);
+  background: transparent;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+    color: var(--color-white);
+  }
+}
+
+.buttonAccent.buttonSecondary {
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--background-color-accent-hover);
+  }
+}
+
+.buttonTertiary {
+  color: var(--color-main);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+    color: var(--color-main);
+    border-color: transparent;
+    background-color: var(--background-color-hover);
+  }
+}
+
+.buttonAccent.buttonTertiary {
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.buttonGray {
+  filter: grayscale(100%);
+}
+
+.buttonActive {
+  color: var(--color-white);
+  border-color: var(--color-main);
+  background-color: var(--color-main);
+}
+
+.buttonDisabled {
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.buttonNoAction {
+  background: red !important;
+}
+
+.buttonWarning {
+  color: var(--color-red);
+
+  &:hover {
+    color: var(--color-red);
+  }
+}
+
+.buttonSecondary.buttonWarning {
+  border-color: var(--color-red);
+
+  &:hover {
+    background: var(--color-red);
+    color: var(--color-white);
+  }
+}
+
+.buttonFullWidth {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonNoIcon {
+  padding-right: var(--distance-normal);
+}
+
+.buttonOnlyIcon {
+  padding: calc(var(--distance-small) - var(--distance-tiny));
+  height: 24px;
+  width: 24px;
+}
+
+.buttonIconRight {
+  padding-right: var(--distance-normal);
+  padding-left: calc(var(--distance-normal) + 5px);
+}
+
+.buttonMarginLeft {
+  margin-left: var(--distance-small);
+}
+
+.buttonMarginRight {
+  margin-right: var(--distance-small);
+}
+
+.buttonMarginTop {
+  margin-top: var(--distance-normal);
+}
+
+.buttonMarginBottom {
+  margin-bottom: var(--distance-normal);
+}
+
+.buttonAlignLeft {
+  margin-right: auto;
+}
+
+.buttonAlignRight {
+  margin-left: auto;
+}
+
+.buttonGroupRight {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.buttonGroupLeft {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

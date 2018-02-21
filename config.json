@@ -1,0 +1,25 @@
+{
+  "multiuser": true,
+  "port": 3000,
+  "timeout": "10s",
+
+  "services": [{
+    "type": "mongo",
+    "alias": "db",
+    "persistent": true
+  }, {
+    "type": "relay"
+  }, {
+    "type": "api",
+    "project": ["vehicles", "members"]
+  }],
+
+  "network": {
+    "frontend": [
+      "https://unpkg.com/leaflet/*",
+      "https://cdnjs.cloudflare.com/ajax/libs/socket.io/*",
+      "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/*"
+    ],
+    "backend": null
+  }
+}

@@ -1,0 +1,110 @@
+@import 'config.css';
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin-right: var(--distance-normal);
+  margin-bottom: var(--distance-normal);
+
+  text-align: left;
+  font-size: var(--font-size-normal);
+  color: var(--color-dark-gray);
+
+  cursor: pointer;
+
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-gray);
+  border: 2px solid transparent;
+}
+
+.selected {
+  border: 2px solid var(--color-main);
+}
+
+.dashboardCard {
+  width: calc(33% - (2 / 3) * var(--distance-normal) - 4px);
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.dashboardCardImage, .dashboardCardAddWrapper {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  margin-bottom: var(--distance-small);
+  background-position: center center;
+}
+
+.dashboardCardLabel, .dashboardCardLabelStrong {
+  padding: var(--distance-small);
+  padding-top: 0;
+  font-weight: var(--font-weight-light);
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.dashboardCardLabelStrong {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.dashboardCardAdd {
+  background-color: transparent;
+  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dashboardCardAddWrapper {
+  background: transparent;
+  border-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FULL PAGE LIST */
+
+.listCard {
+  width: calc(20% - (4 / 5) * var(--distance-normal) - 4px);
+
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+}
+
+.connectivityStatus {
+  display: inline-block;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.connectivityStatus.offline {
+  background: #AAAAAA
+}
+
+.connectivityStatus.online {
+  background: var(--color-green)
+}
+
+.connectivityStatus.indeterminate {
+  background: var(--color-yellow)
+}
+
+.connectivityStatus.disabled {
+  background: transparent;
+  border: 1px solid #AAAAAA
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--distance-normal)
+}

@@ -1,0 +1,72 @@
+:root {
+
+  /* Font families */
+  --font-family: 'Montserrat', sans-serif;
+
+  /* Font sizes */
+  --font-size-small: 9pt;
+  --font-size-normal: 13pt;
+  --font-size-big: 18pt;
+  --font-size-giant: 25pt;
+  --font-size-monstrous: 35pt;
+
+  /* Font weights */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 900;
+
+
+  --color-grey:#D6D6D6;
+  --color-main:#005691;
+  /* Main colors */
+
+  --color-brand:#005691;
+  --color-accent:#008ECF;
+  --color-success:#78BE20;
+  --color-danger:#E20015;
+
+
+
+  --color-white: #FDFDFD;
+  --color-grey-100: #f5f5f5;
+  --color-grey-200: #eee;
+  --color-grey-300: #D6D6D6;
+  --color-grey-400: #BDBDBD;
+  --color-grey-700: #525F6B;
+  --color-grey-800: #37474F;
+  --color-black: #1F1F1F;
+
+  /* Background colors */
+  --background-color-dark-gray: #cfd2e0;
+  --background-color-light-gray: #f4f6fe;
+  --background-color-hover: rgba(0, 0, 0, 0.05);
+  --background-color-main-hover: color(var(--color-main) lightness(45%));
+  --background-color-accent-hover: color(var(--color-accent) lightness(40%));
+  --background-color-main-active: color(var(--color-main) alpha(80%));
+  --background-color-selected: color(var(--color-main) alpha(10%));
+
+  /* Box Shadows */
+  --shadow-main: 0px 5px 15px 0px color(var(--color-main) alpha(40%));
+  --shadow-main-hover: 0px 5px 10px 0px color(var(--color-main) alpha(50%));
+  --shadow-accent: 0px 5px 15px 0px color(var(--color-accent) alpha(40%));
+  --shadow-accent-hover: 0px 5px 10px 0px color(var(--color-accent) alpha(50%));
+  --shadow-gray: 0 0 45px 5px color(var(--color-grey) alpha(15%));
+
+  /* Distances */
+  --distance-tiny: 0.15rem;
+  --distance-small: 0.5rem;
+  --distance-normal: 1rem;
+  --distance-big: 2rem;
+  --distance-giant: 3rem;
+
+  /* Border radiuses */
+  --border-radius-squircle: 10px;
+  --border-radius-circle: 1000000px;
+
+}
+
+:global * {
+  flex-shrink: 0;
+}
