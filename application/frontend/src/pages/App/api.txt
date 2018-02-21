@@ -1,0 +1,15 @@
+52.574251, 11.861697 Stendal
+
+52.428096, 10.797756 Wolfsburg
+
+51.535984, 9.922052 Göttingen
+
+51.268909, 9.468040 Kassel
+
+50.555649, 9.688530 Fulda
+
+50.120284, 8.647274 Frankfurt
+
+49.483141, 8.549261 Mannheim
+
+https://creativecommons.tankerkoenig.de/json/list.php?lat=52.574251&lng=11.861697&type=all&rad=1000&apikey=563eaa3d-49b9-3994-26fb-a3e3b3369212
