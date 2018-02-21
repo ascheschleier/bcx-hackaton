@@ -4,7 +4,11 @@ import { Route, Switch, Redirect } from 'react-router'
 import PageWrapper from '../../components/PageWrapper'
 import APP_CONFIG from '../../../../app.json'
 import path from 'path';
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
+
+
+
+const tank = require('./tank.json');
 
 // import '../../sdk'
 //const { socket, rest } = window.calponia
@@ -24,7 +28,7 @@ class App extends Component {
 
     this.state = {
       vehicles: [],
-
+      center: [13.419435, 52.51477]
     }
   }
 
@@ -64,25 +68,33 @@ class App extends Component {
   // }
 
   render() {
-    const { vehicles } = this.state
+
+    const { vehicles, center } = this.state
+
+    console.log("tank : ", tank);
 
     return (
+
       <BrowserRouter>
         <PageWrapper>
           <Map
-            style="mapbox://styles/mapbox/streets-v9"
+            style="mapbox://styles/mapbox/streets-v8"
+            center={center}
+            onClick={console.log}
             containerStyle={{
-              height: "100vh",
-              width: "100vw"
+              height: "90vh",
+              width: "90vw",              
             }}>
             <Layer
               type="symbol"
               id="marker"
               layout={{ "icon-image": "marker-15" }}>
-              <Feature coordinates={[52.497687,13.3726634]} />
+              <Feature coordinates={[13.419435, 52.51477]} />
+              {tank.stations.map(station => (
+                <Feature key={station.id} coordinates={[station.lng, station.lat]} />
+              ))}
             </Layer>
           </Map>
-
         </PageWrapper>
       </BrowserRouter>
     )
