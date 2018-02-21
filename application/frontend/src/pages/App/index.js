@@ -9,6 +9,7 @@ import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 
 
 const tank = require('./tank.json');
+const route = require('./routePoints.json');
 
 // import '../../sdk'
 //const { socket, rest } = window.calponia
@@ -36,6 +37,12 @@ const POSITION_CIRCLE_END = {
   'circle-color': '#e5cccc',
   'circle-stroke-color': 'red'
 };
+
+const PAINT_ROUTE_LINE = {
+ 'line-color': '#888',
+ 'line-width': 8
+};
+
 
 
 class App extends Component {
@@ -93,6 +100,7 @@ class App extends Component {
     console.log("tank : ", tank);
     console.log("start", start);
     console.log("end", end);
+    console.log("route", route.routes[0].geometry);
     return (
       <BrowserRouter>
         <PageWrapper>
@@ -143,7 +151,16 @@ class App extends Component {
               paint={POSITION_CIRCLE_END}
             >
               {end && <Feature coordinates={end} />}
-            </Layer>              
+            </Layer>     
+            
+            {end && <Layer
+              type="line"
+              id="route"
+              paint={PAINT_ROUTE_LINE}
+            >
+              {<Feature coordinates={route.routes[0].geometry.coordinates} />}
+            </Layer>}
+                    
           </Map>
         </PageWrapper>
       </BrowserRouter >
