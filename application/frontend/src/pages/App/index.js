@@ -28,7 +28,9 @@ class App extends Component {
 
     this.state = {
       vehicles: [],
-      center: [13.419435, 52.51477]
+      center: [13.419435, 52.51477],
+      start: null,
+      end: null
     }
   }
 
@@ -69,10 +71,11 @@ class App extends Component {
 
   render() {
 
-    const { vehicles, center } = this.state
+    const { vehicles, center, start, end } = this.state
 
     console.log("tank : ", tank);
-
+    console.log("start", start);
+    console.log("end", end);
     return (
 
       <BrowserRouter>
@@ -80,7 +83,16 @@ class App extends Component {
           <Map
             style="mapbox://styles/mapbox/streets-v8"
             center={center}
-            onClick={console.log}
+            onClick={(e, data) => {
+              console.log("E", e);
+              console.log("data", data);
+              let {lng, lat} = data.lngLat;
+              if (!start) {
+                this.setState({start: [lng, lat]})
+                return
+              }
+              this.setState({end: [lng, lat]})
+            }}
             containerStyle={{
               height: "90vh",
               width: "90vw",              
@@ -94,6 +106,10 @@ class App extends Component {
                 <Feature key={station.id} coordinates={[station.lng, station.lat]} />
               ))}
             </Layer>
+              <Layer>
+                {start && <Feature coordinates={start} />}
+                {end && <Feature coordinates={end} />}
+              </Layer>
           </Map>
         </PageWrapper>
       </BrowserRouter>
