@@ -9,6 +9,7 @@ import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 
 
 const tank = require('./tank.json');
+
 const route = require('./routePoints.json');
 
 // import '../../sdk'
