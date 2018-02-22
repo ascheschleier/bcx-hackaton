@@ -6,11 +6,17 @@ import APP_CONFIG from '../../../../app.json'
 import path from 'path';
 import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 
+/*
+49.329955, 11.001151
+49.250885, 10.331491
 
+https://creativecommons.tankerkoenig.de/json/list.php?lat=49.250885&lng=10.331491&type=all&rad=1000&apikey=563eaa3d-49b9-3994-26fb-a3e3b3369212
+*/
 
-const tank = require('./tank.json');
+const tank = require('./tank2.json');
 
-const route = require('./routePoints.json');
+const route = require('./geometrys2.json');
+const save_route = require('./save_route.json');
 
 // import '../../sdk'
 //const { socket, rest } = window.calponia
@@ -37,6 +43,14 @@ const POSITION_CIRCLE_END = {
   'circle-blur': 0.15,
   'circle-color': '#e5cccc',
   'circle-stroke-color': 'red'
+};
+
+const POSITION_CIRCLE_CHEEPEST = {
+  'circle-stroke-width': 4,
+  'circle-radius': 10,
+  'circle-blur': 0.15,
+  'circle-color': '#c5c5c5',
+  'circle-stroke-color': 'orange'
 };
 
 const PAINT_ROUTE_LINE = {
@@ -99,9 +113,34 @@ class App extends Component {
     const { vehicles, center, start, end, loadStations } = this.state
 
     console.log("tank : ", tank);
+    /*
     console.log("start", start);
     console.log("end", end);
     console.log("route", route.routes[0].geometry);
+    */
+    var cheepest_price = 100;
+    var cheepest_index = 0;
+
+    var highest_price = 0;
+    var highest_index = 0;
+    for (var i=0; i < tank.stations.length; i++) {
+      if(/*tank.stations[i].diesel != null && */ tank.stations[i].diesel < cheepest_price){
+        cheepest_price = tank.stations[i].diesel;
+        cheepest_index = i;
+      }
+    } 
+    cheepest_price = 1.069;
+    for (var i=0; i < tank.stations.length; i++) {
+      if(tank.stations[i].diesel > highest_price){
+        highest_price = tank.stations[i].diesel;
+        highest_index = i;
+      }
+    }
+    console.log("Cheepest Station:", tank.stations[cheepest_index])
+    console.log("Cheepest Disel Price:", cheepest_price)
+    console.log("Highest Price Station:", tank.stations[highest_index])
+    console.log("Highest Disel Price:", tank.stations[highest_index].diesel)
+
     return (
       <BrowserRouter>
         <PageWrapper>
@@ -154,12 +193,29 @@ class App extends Component {
               {end && <Feature coordinates={end} />}
             </Layer>     
             
-            {end && <Layer
+            {end && !loadStations && <Layer
               type="line"
               id="route"
               paint={PAINT_ROUTE_LINE}
             >
               {<Feature coordinates={route.routes[0].geometry.coordinates} />}
+            </Layer>}
+
+            {loadStations && <Layer
+              type="line"
+              id="route"
+              paint={PAINT_ROUTE_LINE}
+            >
+              {<Feature coordinates={save_route.routes[0].geometry.coordinates} />}
+            </Layer>}
+
+            
+            {loadStations && <Layer
+              type="circle"
+              id="cheeeeeeep"
+              paint={POSITION_CIRCLE_CHEEPEST}
+            >
+              {<Feature coordinates={[tank.stations[cheepest_index].lng , tank.stations[cheepest_index].lat]} />}
             </Layer>}
                     
           </Map>
